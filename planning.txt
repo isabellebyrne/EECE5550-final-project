@@ -1,0 +1,23 @@
+11/12/2024
+
+what we spoke about:
+-looking at different datasets for the CNN
+-establish basic file structure
+-decided to look at pretrained vs custom architecture
+    -needs to do binary classification if its in the same environment
+    -feature extraction
+
+
+our plan for the next week:
+-identify gaps in knowledge and get up to speed
+-continue to research CNNS and datasets
+-read overfeat paper
+
+
+to discuss next week:
+-determine specifically what our networks will look like, how many, whos doing what, etc 
+
+
+resources:
+-https://www.robots.ox.ac.uk/~mobile/IJRR_2008_Dataset/data.html
+-https://github.com/z014xw/KITTI_GroundTruth?tab=readme-ov-file
