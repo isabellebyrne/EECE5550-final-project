@@ -6,7 +6,7 @@ def similarityMatrix(m1):
     m = np.zeros([len(m1), len(m1)])
     for i, u in enumerate(m1):
         for j, v in enumerate(m1):
-            if j < i:
+            if j <= i:
                 u = u / np.linalg.norm(u)
                 v = v / np.linalg.norm(v)
                 diff = u - v
