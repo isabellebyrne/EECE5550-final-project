@@ -44,9 +44,6 @@ def train_step(model, dataloader, optimizer, device, log_interval=10):
         if (batch_idx + 1) % log_interval == 0:
                 print(f"Validation Batch {batch_idx + 1}/{len(dataloader)} - Loss: {loss.item():.4f}, "
                       f"Avg Loss: {total_loss / (batch_idx + 1):.4f}")
-                
-        if batch_idx == 10:
-            break
 
     return total_loss / len(dataloader)
 
