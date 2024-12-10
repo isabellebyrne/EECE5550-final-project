@@ -74,9 +74,6 @@ def validation_step(model, dataloader, device, log_interval=250):
                 print(f"Validation Batch {batch_idx + 1}/{len(dataloader)} - Loss: {loss.item():.4f}, "
                       f"Avg Loss: {total_loss / (batch_idx + 1):.4f}, Accuracy: {accuracy:.4f}, "
                       f"Avg Accuracy: { total_accuracy / (batch_idx + 1):.4f}")
-                
-            if batch_idx==2:
-                break
 
     return total_loss / len(dataloader), total_accuracy / len(dataloader)
 
@@ -172,10 +169,10 @@ if __name__ == '__main__':
         training_accs = []
         validation_accs = []
 
-os.makedirs(args.args.save_weights_dir, exist_ok=True)
-save_weights_dir = os.path.abspath(args.args.save_weights_dir)
+    os.makedirs(args.save_weights_dir, exist_ok=True)
+    save_weights_dir = os.path.abspath(args.save_weights_dir)
 
-print("save_weights_dir:", save_weights_dir)
+    print("save_weights_dir:", save_weights_dir)
 
 for epoch in range(current_epoch,epochs+1):
     train_loss, train_accuracy = train_step(model, train_dataloader, optimizer, device)
