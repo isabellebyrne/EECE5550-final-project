@@ -24,6 +24,6 @@ def visualizeMatrix(m):
     
 
 if __name__ == "__main__":
-    m1 = np.random.random((500, 500)) # 'array of i random feature vectors for i images
+    m1 = np.random.random((500, 500)) # array of i random feature vectors for i images
     visualizeMatrix(similarityMatrix(m1))
     
