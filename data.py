@@ -160,6 +160,17 @@ def createCombinedDataset(image_dirs, gt_matrix_paths):
 
     return combined_dataset
 
+
+def get_datasets():
+    image_dirs = ['data/CityCentre_Images',
+              'data/NewCollege_Images']
+    gt_matrix_paths = ['data/CityCentreTextFormat.txt',
+                   'data/NewCollegeTextFormat.txt']
+    CityCentre = createCombinedDataset(image_dirs[0], gt_matrix_paths[0])
+    NewCollege = createCombinedDataset(image_dirs[1], gt_matrix_paths[1])
+    return CityCentre, NewCollege
+    
+
 if __name__ == "__main__":
 
     # Check for CustomPairwiseDataset
