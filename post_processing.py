@@ -5,7 +5,7 @@ from torch.functional import F
 def pca(features, reduced_dim = 500):
 
     features_l2_norm = F.normalize(features, p=2, dim=1)
-    features_l2_norm -= torch.mean(features_l2_norm, dim=0, keepdim=True)
+    features_l2_norm -= torch.mean(features_l2_norm, dim=1, keepdim=True)
 
     cov_matrix = torch.matmul(features_l2_norm.T, features_l2_norm) 
     U, S, V = torch.svd(cov_matrix)
